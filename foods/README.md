@@ -15,5 +15,18 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+    final List<String> _titles = [
+        'Lista de Categorias',
+        'Meus Favoritos',
+      ];
+     
+      final List<Widget> _screens = [
+        CategoriesScreen(),
+        FavoriteScreen(),
+      ];
 
-#174C4F - cor da splash
+          return Scaffold(
+          appBar: AppBar(
+            title: Text(_titles[_selectedScreenIndex]),
+          ),
+          body: _screens[_selectedScreenIndex],
